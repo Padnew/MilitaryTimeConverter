@@ -1,6 +1,5 @@
 # Using an import because use the tools available to you right? Work smarter not harder or something?
 # install to console "pip install num2words"
-# I probably could've used a virtual enviroment
 from num2words import num2words
 def militaryTimeConverter(time):
     timeInWords = ""
