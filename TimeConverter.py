@@ -5,13 +5,14 @@ def militaryTimeConverter(time):
     timeInWords = ""
     firstHalf = time.split(":")[0]
     secondHalf = (time.split(":")[1])[:2]
-
+    
     # For AM
     if(time[-2:] == "AM"):
         # First half
-        if(len(firstHalf) == 1):
+        if(len(firstHalf) == 1 or firstHalf == '12'):
             timeInWords += "Zero "
-        timeInWords += num2words(firstHalf) + " "
+        else:
+            timeInWords += num2words(firstHalf) + " "
         # Second half
         if(secondHalf == "00"):
             timeInWords += "hundred hours"
